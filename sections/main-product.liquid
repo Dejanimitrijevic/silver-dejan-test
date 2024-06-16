@@ -85,6 +85,8 @@
             {%- case block.type -%}
               {%- when '@app' -%}
                 {% render block %}
+              {% when 'extra' %}
+                <span>{{ block.settings.product_extra }}</span>
               {%- when 'text' -%}
                 <p
                   class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
@@ -2094,6 +2096,17 @@
           "default": "Heading",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+    {
+      "type": "extra",
+      "name": "product extra",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "product_extra",
+          "label": "Product Extra"
         }
       ]
     }
