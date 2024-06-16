@@ -503,6 +503,10 @@ h6:empty {
   margin-bottom: 4.5rem;
   white-space: nowrap;
 }
+.product-media-container.constrain-height .media img,
+.card__media {
+  border: 5px solid red;
+}
 
 .link-with-icon .icon {
   width: 1.5rem;
